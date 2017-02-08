@@ -27,7 +27,10 @@ class LuckyController extends Controller
     /**
      * @Route(
      *     "/format/demo.{_format}",
-     *     defaults={"_format": "html"}
+     *     defaults={"_format": "html"},
+     *     requirements={
+     *         "_format": "html|rss"
+     *     }
      * )
      */
     public function formatAction($_format)
