@@ -24,4 +24,19 @@ class LuckyController extends Controller
         ));
     }
 
+    /**
+     * @Route(
+     *     "/format/demo.{_format}",
+     *     defaults={"_format": "html"}
+     * )
+     */
+    public function formatAction($_format)
+    {
+    	 return new Response(
+            '<html><body>formate demo:'.$_format.'</body></html>'
+        );
+
+    }
+
+
 }
